@@ -1,0 +1,39 @@
+{
+  "plugin": "devpost-hackathon",
+  "version": 2,
+  "hackathon": {
+    "slug": "call-e",
+    "name": "CALL-E: Your Code Is Calling",
+    "url": "https://call-e.devpost.com/",
+    "selected": true,
+    "source": "known"
+  },
+  "participant": {
+    "name": "",
+    "display_name": ""
+  },
+  "project": {
+    "name": "VINRelease",
+    "summary": "A CALL-E-powered title-exception desk that calls authorized auctions and lienholders, converts conversations into typed case transitions, and stops when human judgment is required.",
+    "ai_usage": "",
+    "codex_usage": ""
+  },
+  "current_stage": "resources",
+  "completed_stages": [
+    "start-hackathon",
+    "review"
+  ],
+  "rules_acknowledged": true,
+  "learning": {
+    "status": "in-progress",
+    "current_step": "checklist",
+    "completed_steps": ["scope", "prd", "spec"],
+    "plan_file": "docs/hackathon-build/spec.md",
+    "checklist_file": "docs/hackathon-build/checklist.md"
+  },
+  "submission": {
+    "draft_file": "devpost-submission.md",
+    "status": "not-started"
+  },
+  "next_command": "build-project"
+}
