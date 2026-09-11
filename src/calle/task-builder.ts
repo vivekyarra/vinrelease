@@ -1,11 +1,11 @@
-import type { CallPreview, } from "@/safety/call-policy";
+import type { CallPreview } from "@/safety/call-policy";
 import type { Contact, TitleCase } from "@/domain/model";
 
 export function buildCallTask(titleCase: TitleCase, contact: Contact, preview: CallPreview) {
   const permittedFacts = preview.mayDisclose.map((field) => `${field}: ${valueFor(titleCase, field)}`).join("\n");
   return [
     "You are VINRelease, an automated assistant calling for a dealership title operations team.",
-    "State clearly that you are an automated assistant. The recipient is a consenting test participant.",
+    "State clearly that you are an automated assistant. Use only the server-approved recipient and bounded purpose supplied for this call.",
     `Goal: ${preview.purpose}`,
     `Organization and department: ${contact.organization}, ${contact.department}.`,
     "You may disclose only these approved facts:",

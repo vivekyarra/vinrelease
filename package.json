@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
+    "verify:live": "node --env-file=.env.local --import tsx scripts/live-proof.ts",
     "verify": "npm run lint && npm run typecheck && npm run test && npm run build"
   },
   "dependencies": {
@@ -26,6 +27,7 @@
     "agent-browser": "^0.37.1",
     "eslint": "latest",
     "eslint-config-next": "latest",
+    "tsx": "latest",
     "typescript": "latest",
     "vitest": "latest"
   }

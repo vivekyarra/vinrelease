@@ -28,4 +28,12 @@ Refreshing after every step should preserve the same demo state. A different bro
 
 ## Live verification
 
+For the smallest reproducible proof, configure live mode, set a fresh `VINRELEASE_LIVE_RUN_ID`, and run:
+
+```bash
+npm run verify:live -- --confirm-one-real-call
+```
+
+The command prints the provider call ID immediately, waits for a terminal result, and reports whether the strict schema validated. Confirm that the CALL-E dashboard shows the same call ID. The guard requires the explicit flag on every run, and reusing a run label reuses the same idempotency key.
+
 Use only destinations controlled by the tester or recipients who explicitly consented. Configure live mode as documented in the root README, verify the masked destination in the authorization dialog, and approve one call. Confirm that the CALL-E dashboard shows the same call ID shown in VINRelease. Do not infer that a title was received from a “release sent” result.

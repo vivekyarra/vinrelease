@@ -4,6 +4,8 @@ import { AUCTION_RESULT, HUMAN_STOP_RESULT, LIENHOLDER_RESULT } from "@/fixtures
 import type { CallPreview } from "@/safety/call-policy";
 import { buildCallTask } from "./task-builder";
 
+const CALLE_API_BASE_URL = "https://api.heycall-e.com";
+
 export type ProviderResult = {
   providerCallId: string;
   status: "queued" | "in_progress" | "completed" | "failed";
@@ -46,7 +48,7 @@ export async function createProviderCall(input: {
   if (!apiKey) throw new Error("Live mode requires CALLE_API_KEY on the server.");
   const client = new CalleClient({
     apiKey,
-    baseUrl: process.env.CALLE_BASE_URL ?? "https://api.heycall-e.com",
+    baseUrl: CALLE_API_BASE_URL,
   });
   const call = await client.calls.create({
     task: buildCallTask(input.titleCase, input.contact, input.preview),
@@ -67,7 +69,7 @@ export async function getProviderCall(providerCallId: string): Promise<ProviderR
   if (providerCallId.startsWith("demo-")) throw new Error("Demo calls are already materialized locally.");
   const apiKey = process.env.CALLE_API_KEY;
   if (!apiKey) throw new Error("Live mode requires CALLE_API_KEY on the server.");
-  const client = new CalleClient({ apiKey, baseUrl: process.env.CALLE_BASE_URL ?? "https://api.heycall-e.com" });
+  const client = new CalleClient({ apiKey, baseUrl: CALLE_API_BASE_URL });
   return normalizeCall(await client.calls.get(providerCallId));
 }
 

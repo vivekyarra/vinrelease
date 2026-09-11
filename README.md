@@ -2,6 +2,10 @@
 
 VINRelease is an evidence-first title exception desk for used-car dealerships. When a purchased vehicle is stuck without a title, it uses governed CALL-E calls to identify the exact blocker, follow the next responsible party, and move the case only when the structured phone result supports that move.
 
+- **Public demo:** https://vinrelease.vercel.app
+- **Source:** https://github.com/vivekyarra/vinrelease
+- **CALL-E gallery contribution:** https://github.com/CALLE-AI/awesome-phone-call-agents/pull/463
+
 The default experience is a complete no-call replay. It demonstrates a two-call chain: an auction identifies a missing lien release, then a lienholder supplies reference `LR-4721` while physical receipt remains unconfirmed. A second scenario proves the fail-closed path when a recipient asks for a credential.
 
 ## Why it exists
@@ -29,14 +33,24 @@ CALLE_API_KEY=your_server_side_key
 CALLE_AUCTION_PHONE=+15551234567
 CALLE_LIENHOLDER_PHONE=+15557654321
 PUBLIC_BASE_URL=https://your-public-host.example
+VINRELEASE_LIVE_RUN_ID=team-controlled-proof-01
 ```
 
 Both destinations must be E.164 numbers controlled by, or explicitly consented for, the operator. `CALLE_API_KEY` stays server-side. The app creates one CALL-E task only after a user checks the per-call authorization box. It uses `@call-e/calle`, a strict recipient result schema, and a stable idempotency key. The live response is polled by provider call ID; terminal webhooks are deduplicated and reconciled through the Calls API.
+
+For a judge-recordable proof run, configure a fresh `VINRELEASE_LIVE_RUN_ID` and one consenting `CALLE_AUCTION_PHONE`, then run:
+
+```bash
+npm run verify:live -- --confirm-one-real-call
+```
+
+The command refuses to call unless live mode, the API key, a fresh run label, a valid approved destination, and the explicit confirmation flag are all present. It creates at most one idempotent CALL-E task for that run label, prints the provider call ID immediately, waits for the terminal result, validates the same strict schema used by the app, and prints a redacted proof summary. Reusing the run label reuses the same idempotency key.
 
 ## Safety and side effects
 
 - Default mode is a deterministic replay and cannot place calls.
 - Live mode makes exactly one outbound call to the displayed, pre-provisioned contact after explicit authorization.
+- The CALL-E SDK is pinned to the official `https://api.heycall-e.com` host; an environment variable cannot redirect the API key.
 - Phone numbers are masked in the interface and never accepted through arbitrary user input.
 - The task discloses that it is an automated agent calling for the dealership.
 - Credentials, financial details, fees, legal representations, and unverified facts are outside the disclosure budget.

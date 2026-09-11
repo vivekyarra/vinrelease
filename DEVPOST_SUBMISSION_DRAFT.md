@@ -53,9 +53,22 @@ Open the public demo, verify **Safe demo** in the header, and run the two author
 
 vivekyarra567@gmail.com
 
-## Links to add before submission
+## Links
 
-- Public demo: pending deployment
-- Source code: pending publication
-- Required awesome-phone-call-agents pull request: pending publication
+- Public demo: https://vinrelease.vercel.app
+- Source code: https://github.com/vivekyarra/vinrelease
+- Required awesome-phone-call-agents pull request: https://github.com/CALLE-AI/awesome-phone-call-agents/pull/463
 - Video: pending recording/upload
+
+## Screenshot plan
+
+1. Use `artifacts/production-resolved.png` as the primary product image: it shows the deployed two-call outcome, reference `LR-4721`, and the conservative `WAITING_EXTERNAL` state.
+2. Use `artifacts/authorization.png` to prove masked-recipient review, minimum disclosure, and explicit authorization.
+3. Use `artifacts/production-human-stop.png` to prove the credential-request stop and title-clerk handoff.
+4. Keep `artifacts/mobile.png` as responsive-product evidence or a backup gallery image.
+
+## Readiness boundary
+
+Verified now: the public app and source repository are reachable; the deployed demo is resettable and cannot dial; the deterministic two-call and human-stop paths work; 21 application tests, lint, type checking, and the Next.js production build pass; the public CALL-E gallery pull request is open, mergeable, and passes its repository validator.
+
+Pending external proof: one real call to a consenting, team-controlled number; public demo-video recording/upload; and the final Devpost submission. Do not claim live phone execution in the video or submission until the provider call ID, terminal status, and schema-valid result have been captured.
