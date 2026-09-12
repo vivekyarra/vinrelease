@@ -5,6 +5,7 @@ VINRelease is an evidence-first title exception desk for used-car dealerships. W
 - **Public demo:** https://vinrelease.vercel.app
 - **Source:** https://github.com/vivekyarra/vinrelease
 - **CALL-E gallery contribution:** https://github.com/CALLE-AI/awesome-phone-call-agents/pull/463
+- **Three-minute demo video (local MP4; public upload pending):** [`artifacts/vinrelease-demo-final.mp4`](artifacts/vinrelease-demo-final.mp4)
 
 ### Verified live proof
 

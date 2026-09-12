@@ -8,3 +8,6 @@ coverage/
 *.tsbuildinfo
 .vercel/
 .upstream/
+artifacts/demo-voice-*.wav
+artifacts/demo-segment-*.mp4
+artifacts/video-proof-frame.png
