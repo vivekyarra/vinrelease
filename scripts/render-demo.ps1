@@ -8,7 +8,7 @@ $ffprobe = (Get-Command ffprobe -ErrorAction Stop).Source
 Add-Type -AssemblyName System.Speech
 $speaker = New-Object System.Speech.Synthesis.SpeechSynthesizer
 $speaker.SelectVoice('Microsoft Zira Desktop')
-$speaker.Rate = 0
+$speaker.Rate = 1
 
 $segments = @(
   @{
