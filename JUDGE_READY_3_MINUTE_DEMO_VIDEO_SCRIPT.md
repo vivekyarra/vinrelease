@@ -1,4 +1,4 @@
-# VINRelease — judge demo (final cut 1:43, hard cap 2:59)
+# VINRelease — judge demo (final cut about 1:44, hard cap 2:59)
 
 This is one continuous recording of the **deployed application** at 1440 × 900. Every pointer movement, click, selection, and scroll is a browser input event. Keep the **Safe demo** badge visible. The two pictured outcomes are deterministic no-call replays; the separate completed CALL-E call is described accurately in the close. No still-image slideshow, simulated phone audio, or claim that a title was received.
 

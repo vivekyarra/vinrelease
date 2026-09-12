@@ -8,6 +8,8 @@ coverage/
 *.tsbuildinfo
 .vercel/
 .upstream/
+.devpost-hackathon-state.json
+devpost-submission.md
 artifacts/demo-voice-*.wav
 artifacts/demo-segment-*.mp4
 artifacts/video-proof-frame.png
