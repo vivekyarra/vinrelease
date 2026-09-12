@@ -51,9 +51,9 @@ https://github.com/vivekyarra/vinrelease
 
 ## Demo Video
 
-TODO: Upload the real 2:53 VINRelease walkthrough in `artifacts/vinrelease-demo-final.mp4` to YouTube or Vimeo, set it public, and place the URL here. The local MP4 and GitHub file are not substitutes for the required public video link.
+TODO: Upload the 1:43 real-browser VINRelease walkthrough in `artifacts/vinrelease-demo-final.mp4` to YouTube or Vimeo, set it public, and place the URL here. The local MP4 and GitHub file are not substitutes for the required public video link.
 
-The approximately three-minute outline: the stalled title and value at risk; the governed auction preview and safe replay; the lienholder call and conservative `WAITING_EXTERNAL`; the credential-request stop; the separate real CALL-E terminal receipt and what it does *not* prove.
+The sub-two-minute walkthrough shows the stalled title and value at risk; the governed auction preview and safe replay; the lienholder replay and conservative `WAITING_EXTERNAL`; and the credential-request stop. Its ElevenLabs narration accurately distinguishes the separate real CALL-E task and what it did *not* prove. All pictured app interactions, pointer movements, clicks, and hovers come from the deployed browser, not a slideshow.
 
 ## Screenshot Shot List
 

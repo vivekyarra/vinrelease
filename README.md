@@ -5,7 +5,7 @@ VINRelease is an evidence-first title exception desk for used-car dealerships. W
 - **Public demo:** https://vinrelease.vercel.app
 - **Source:** https://github.com/vivekyarra/vinrelease
 - **CALL-E gallery contribution:** https://github.com/CALLE-AI/awesome-phone-call-agents/pull/463
-- **Three-minute demo video (local MP4; public upload pending):** [`artifacts/vinrelease-demo-final.mp4`](artifacts/vinrelease-demo-final.mp4)
+- **1:43 real-browser demo video (local MP4; public upload pending):** [`artifacts/vinrelease-demo-final.mp4`](artifacts/vinrelease-demo-final.mp4)
 
 ### Verified live proof
 
@@ -92,7 +92,7 @@ npm run verify
 
 The suite covers allowed contacts, disclosure limits, idempotency, structured-result rejection, conservative transitions, webhook deduplication, the two-call workflow, the human stop, and serverless demo reconstruction.
 
-See [testing instructions](docs/TESTING.md), [architecture notes](docs/ARCHITECTURE.md), and the [three-minute demo script](JUDGE_READY_3_MINUTE_DEMO_VIDEO_SCRIPT.md).
+See [testing instructions](docs/TESTING.md), [architecture notes](docs/ARCHITECTURE.md), and the [timed demo script](JUDGE_READY_3_MINUTE_DEMO_VIDEO_SCRIPT.md). The video is captured from the deployed app with browser-level pointer and click events, then voiced with ElevenLabs. The safe replay is not footage or audio of the separate real CALL-E call.
 
 ## Hackathon
 
