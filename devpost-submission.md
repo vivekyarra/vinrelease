@@ -51,7 +51,7 @@ https://github.com/vivekyarra/vinrelease
 
 ## Demo Video
 
-TODO: Upload the real VINRelease walkthrough in `artifacts/vinrelease-demo-final.mp4` to YouTube or Vimeo, set it public, and place the URL here. This is required before Devpost submission.
+TODO: Upload the real 2:53 VINRelease walkthrough in `artifacts/vinrelease-demo-final.mp4` to YouTube or Vimeo, set it public, and place the URL here. The local MP4 and GitHub file are not substitutes for the required public video link.
 
 The approximately three-minute outline: the stalled title and value at risk; the governed auction preview and safe replay; the lienholder call and conservative `WAITING_EXTERNAL`; the credential-request stop; the separate real CALL-E terminal receipt and what it does *not* prove.
 

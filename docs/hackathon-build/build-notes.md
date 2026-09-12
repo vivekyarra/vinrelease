@@ -22,3 +22,10 @@
 - Preserved the user's standing 10% Codex usage reserve rule in `AGENTS.md` and a cross-chat memory note.
 - CALL-E rejected the first live-proof request before dialing because nullable JSON Schema union types were unsupported; no call ID existed for that request. Replaced those provider-wire fields with documented plain string types, normalized empty strings to domain nulls locally, and added tests for malformed dates.
 - `npm run verify` then passed lint, typecheck, 23 tests, and production build. A single fresh live request to the user-controlled number created CALL-E call `call_rkZ1HkMxxjswZKSx1CjCkA` and reached terminal `completed` with a schema-valid `needs_human` result and three evidence items. The respondent indicated the synthetic case could be located but did not provide the blocker/owner before the call ended; no business resolution was claimed.
+
+## 2026-09-12
+
+- Recorded real clicks through the deployed safe demo, rendered a narrated 1440x900 MP4, and verified the final duration is 173.13 seconds (under the official three-minute limit). The video labels the public replay and real CALL-E receipt separately; no actual call audio is represented by the fixture.
+- Pushed code, evidence, and video to GitHub through commit `1566d6b`. The local worktree was clean at that checkpoint.
+- Official Devpost status remains open for submissions, with a public YouTube/Vimeo video link mandatory. A local MP4 or GitHub file is not a substitute. Submitter eligibility fields also require the user's declarations.
+- Vercel CLI returned `Not authorized` during the attempted production redeploy. The previously deployed safe demo remained usable, but the newest commit was not confirmed deployed; re-authentication or alternate verified deployment is needed before claiming that.
