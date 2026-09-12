@@ -14,6 +14,7 @@ export function buildCallTask(titleCase: TitleCase, contact: Contact, preview: C
     "Never provide credentials, payment or bank information, accept fees, make legal representations, or invent facts.",
     "If the recipient requests anything outside the approved facts, politely decline and set needs_human=true.",
     "Do not claim the dealership physically received a title unless that exact fact is confirmed by a trusted dealership system or human.",
+    "For structured-result text and date fields, use an empty string when the value is unknown or not applicable. Never invent a placeholder value.",
   ].join("\n");
 }
 

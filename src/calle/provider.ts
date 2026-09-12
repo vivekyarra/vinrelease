@@ -1,5 +1,5 @@
 import { CalleClient, type Call } from "@call-e/calle";
-import { callResultSchema, CALLE_RECIPIENT_RESULT_SCHEMA, type CallResult, type Contact, type TitleCase } from "@/domain/model";
+import { callResultSchema, CALLE_RECIPIENT_RESULT_SCHEMA, normalizeCalleResult, type CallResult, type Contact, type TitleCase } from "@/domain/model";
 import { AUCTION_RESULT, HUMAN_STOP_RESULT, LIENHOLDER_RESULT } from "@/fixtures/demo";
 import type { CallPreview } from "@/safety/call-policy";
 import { buildCallTask } from "./task-builder";
@@ -82,7 +82,7 @@ function normalizeCall(call: Call): ProviderResult {
     providerCallId: call.id,
     status,
     completedAt: call.completedAt,
-    result: raw ? callResultSchema.parse(raw) : null,
+    result: raw ? normalizeCalleResult(raw) : null,
     evidence: call.evidence,
     summary: call.summary,
     transcriptReference: call.recipients[0]?.attempts[0]?.id

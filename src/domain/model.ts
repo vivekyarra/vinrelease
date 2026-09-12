@@ -50,6 +50,38 @@ export const callResultSchema = z.object({
   notes: z.string(),
 }).strict();
 
+const calleWireResultSchema = z.object({
+  party_reached: z.boolean(),
+  case_located: z.boolean(),
+  outcome: callOutcomeSchema,
+  blocker_type: blockerSchema,
+  responsible_party: z.enum(["auction", "lienholder", "dealer", "unknown"]),
+  responsible_party_name: z.string(),
+  reference_number: z.string(),
+  promised_action: z.string(),
+  promised_date: z.union([z.literal(""), z.string().date()]),
+  title_sent: z.boolean(),
+  tracking_number: z.string(),
+  needs_human: z.boolean(),
+  human_reason: z.string(),
+  unknown_questions: z.array(z.string()),
+  notes: z.string(),
+}).strict();
+
+export function normalizeCalleResult(raw: unknown): CallResult {
+  const wire = calleWireResultSchema.parse(raw);
+  const nullable = (value: string) => value.trim() === "" ? null : value;
+  return callResultSchema.parse({
+    ...wire,
+    responsible_party_name: nullable(wire.responsible_party_name),
+    reference_number: nullable(wire.reference_number),
+    promised_action: nullable(wire.promised_action),
+    promised_date: nullable(wire.promised_date),
+    tracking_number: nullable(wire.tracking_number),
+    human_reason: nullable(wire.human_reason),
+  });
+}
+
 export type CaseState = z.infer<typeof caseStateSchema>;
 export type Blocker = z.infer<typeof blockerSchema>;
 export type CallResult = z.infer<typeof callResultSchema>;
@@ -137,14 +169,14 @@ export const CALLE_RECIPIENT_RESULT_SCHEMA = {
     outcome: { type: "string", enum: callOutcomeSchema.options },
     blocker_type: { type: "string", enum: blockerSchema.options },
     responsible_party: { type: "string", enum: ["auction", "lienholder", "dealer", "unknown"] },
-    responsible_party_name: { type: ["string", "null"] },
-    reference_number: { type: ["string", "null"] },
-    promised_action: { type: ["string", "null"] },
-    promised_date: { type: ["string", "null"], format: "date" },
+    responsible_party_name: { type: "string", description: "Name of the responsible party, or an empty string when unknown." },
+    reference_number: { type: "string", description: "Reference number stated during the call, or an empty string when unavailable." },
+    promised_action: { type: "string", description: "Action explicitly promised by the recipient, or an empty string when none was promised." },
+    promised_date: { type: "string", description: "Promised date in YYYY-MM-DD format, or an empty string when no date was promised." },
     title_sent: { type: "boolean" },
-    tracking_number: { type: ["string", "null"] },
+    tracking_number: { type: "string", description: "Shipment tracking number stated during the call, or an empty string when unavailable." },
     needs_human: { type: "boolean" },
-    human_reason: { type: ["string", "null"] },
+    human_reason: { type: "string", description: "Why human review is required, or an empty string when it is not required." },
     unknown_questions: { type: "array", items: { type: "string" } },
     notes: { type: "string" },
   },

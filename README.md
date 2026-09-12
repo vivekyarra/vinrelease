@@ -6,6 +6,10 @@ VINRelease is an evidence-first title exception desk for used-car dealerships. W
 - **Source:** https://github.com/vivekyarra/vinrelease
 - **CALL-E gallery contribution:** https://github.com/CALLE-AI/awesome-phone-call-agents/pull/463
 
+### Verified live proof
+
+One CALL-E call to a user-controlled test number completed on September 11, 2026 (`call_rkZ1HkMxxjswZKSx1CjCkA`). CALL-E returned three evidence items and a schema-valid `needs_human` result because the recipient indicated the synthetic case could be located but the conversation ended before a blocker or owner was established. This proves runtime CALL-E execution and a conservative uncertainty handoff; it does not prove a real title was released. The public two-call scenario below is a deterministic, no-call replay.
+
 The default experience is a complete no-call replay. It demonstrates a two-call chain: an auction identifies a missing lien release, then a lienholder supplies reference `LR-4721` while physical receipt remains unconfirmed. A second scenario proves the fail-closed path when a recipient asks for a credential.
 
 ## Why it exists
@@ -31,7 +35,11 @@ Copy `.env.example` to `.env.local` and set:
 VINRELEASE_MODE=live
 CALLE_API_KEY=your_server_side_key
 CALLE_AUCTION_PHONE=+15551234567
+CALLE_AUCTION_REGION=US
+CALLE_AUCTION_LOCALE=en-US
 CALLE_LIENHOLDER_PHONE=+15557654321
+CALLE_LIENHOLDER_REGION=US
+CALLE_LIENHOLDER_LOCALE=en-US
 PUBLIC_BASE_URL=https://your-public-host.example
 VINRELEASE_LIVE_RUN_ID=team-controlled-proof-01
 ```

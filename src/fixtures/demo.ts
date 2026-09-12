@@ -58,6 +58,10 @@ export function createDemoCase(): TitleCase {
   const now = new Date().toISOString();
   const auctionPhone = process.env.CALLE_AUCTION_PHONE ?? "+15550101001";
   const lienholderPhone = process.env.CALLE_LIENHOLDER_PHONE ?? "+15550101002";
+  const auctionRegion = process.env.CALLE_AUCTION_REGION ?? "US";
+  const auctionLocale = process.env.CALLE_AUCTION_LOCALE ?? "en-US";
+  const lienholderRegion = process.env.CALLE_LIENHOLDER_REGION ?? "US";
+  const lienholderLocale = process.env.CALLE_LIENHOLDER_LOCALE ?? "en-US";
   return {
     id: "case-4821",
     stockNumber: "4821",
@@ -79,8 +83,8 @@ export function createDemoCase(): TitleCase {
         department: "Title Desk",
         phoneE164: auctionPhone,
         phoneDisplay: maskPhone(auctionPhone),
-        region: "US",
-        locale: "en-US",
+        region: auctionRegion,
+        locale: auctionLocale,
         provenance: "Provisioned by Northstar title operations for the consenting demo recipient.",
         authorized: true,
         active: true,
@@ -92,8 +96,8 @@ export function createDemoCase(): TitleCase {
         department: "Lien Release Desk",
         phoneE164: lienholderPhone,
         phoneDisplay: maskPhone(lienholderPhone),
-        region: "US",
-        locale: "en-US",
+        region: lienholderRegion,
+        locale: lienholderLocale,
         provenance: "Provisioned by Northstar title operations for the consenting demo recipient.",
         authorized: true,
         active: true,

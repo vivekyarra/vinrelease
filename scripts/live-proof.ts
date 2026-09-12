@@ -1,5 +1,5 @@
 import { CalleClient } from "@call-e/calle";
-import { callResultSchema, CALLE_RECIPIENT_RESULT_SCHEMA } from "../src/domain/model";
+import { CALLE_RECIPIENT_RESULT_SCHEMA, normalizeCalleResult } from "../src/domain/model";
 import { createDemoCase } from "../src/fixtures/demo";
 import { buildCallPreview } from "../src/safety/call-policy";
 import { buildCallTask } from "../src/calle/task-builder";
@@ -52,7 +52,7 @@ const created = await client.calls.create({
 console.log(`CALL-E call created: ${created.id}`);
 const completed = await client.calls.waitForResult(created.id, { intervalMs: 5_000, timeoutMs: 12 * 60_000 });
 const rawResult = completed.recipients[0]?.structuredResult;
-const result = callResultSchema.parse(rawResult);
+const result = normalizeCalleResult(rawResult);
 
 console.log(JSON.stringify({
   provider: "CALL-E",

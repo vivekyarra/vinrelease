@@ -1,45 +1,27 @@
-# VINRelease — three-minute demo script
+# VINRelease - three-minute demo script
 
-Record at 1440p or 1080p with the deployed URL visible. Keep the pointer near the control being discussed.
+Record the real deployed app at 1440p or 1080p. Keep **Safe demo** visible. The public browser sequence is a deterministic, no-call replay; do not describe it as footage of a real phone conversation.
 
-## 0:00–0:20 — the operational loss
+## 0:00-0:20 - the operational loss
 
-Show the hero and the `$18,700 inventory blocked` summary.
+Show the hero, blocked inventory value, and overdue BMW. Say: "Dealership software handles clean title transactions. VINRelease handles the exceptions that leave purchased vehicles unsellable while title clerks chase answers by phone."
 
-Say: “Dealership software handles clean title transactions. VINRelease handles the exceptions that leave purchased vehicles sitting unsellable while title clerks chase answers by phone.”
+## 0:20-0:50 - the governed first call
 
-## 0:20–0:45 — the decision surface
+Select **Resolve next blocker**. Point to the masked recipient, purpose, approved facts, prohibited disclosures, and authorization checkbox. Say: "Before any CALL-E task exists, the operator sees exactly who will be called and what the agent may disclose. The task is bound to this approval and protected by an idempotency key."
 
-Point to the current blocker, next owner, and evidence count. Scroll to the control layer.
+## 0:50-1:25 - phone evidence changes the owner
 
-Say: “This is one overdue BMW, 23 days past its expected title date. VINRelease does not start with a free-form chatbot. It starts with a controlled case state and one approved next action.”
+Authorize the safe replay. Show **Next call ready**, **Lien release missing**, ABC Bank as the next owner, and the evidence timeline. Say: "In this fixture, the auction identifies a missing lien release. VINRelease accepts only a typed, validated result before changing the case owner."
 
-## 0:45–1:15 — governed first call
+## 1:25-1:55 - conservative second result
 
-Select **Resolve next blocker**. Point to the masked number, purpose, allowed fields, blocked fields, and expected transition. Check the authorization box and start the safe demo.
+Authorize the lienholder replay. Show reference `LR-4721` and **Waiting external**. Say: "The lienholder says the release was transmitted, but that is not proof the dealership has a title. VINRelease records the reference and waits for receipt confirmation instead of closing the case."
 
-Say: “Before any CALL-E task exists, the operator sees the exact recipient, purpose, disclosure budget, and expected state change. The task is bound to this preview and protected by an idempotency key.”
+## 1:55-2:25 - safety stop
 
-## 1:15–1:45 — phone evidence changes the owner
+Reset, choose **Unsupported credential request**, authorize, and show **Needs title clerk**. Say: "The agent cannot supply portal credentials, payment details, or invented facts. A request outside the approved packet stops automation and hands the case to a title clerk."
 
-Show **Next call ready**, **Lien release missing**, and expand the newest phone evidence.
+## 2:25-3:00 - separate real CALL-E proof
 
-Say: “The auction located the vehicle and identified ABC Bank as the blocker. A strict structured result moves ownership to the lienholder. Unknown text cannot silently become progress.”
-
-## 1:45–2:15 — second call, conservative outcome
-
-Authorize the ABC Bank call. Expand the newest evidence and point to reference `LR-4721` and **Waiting external**.
-
-Say: “The lienholder says the release was sent and gives a reference. VINRelease records that evidence, but it refuses to call the title received. Sent is not received, so the case waits for confirmation.”
-
-## 2:15–2:42 — prove the safety stop
-
-Reset. Open the first preview, choose **Unsupported credential request**, authorize it, and point to **Needs title clerk**.
-
-Say: “If a recipient asks for a portal security code, the agent declines. The workflow stops for a title clerk. Credentials, payments, legal judgment, and invented facts stay outside automation.”
-
-## 2:42–3:00 — close with technical proof
-
-Show the footer and briefly cut to the public GitHub repository’s test section or CI result.
-
-Say: “VINRelease uses the official CALL-E TypeScript SDK, strict structured outputs, canonical result reconciliation, and an evidence-linked state machine. It turns phone calls into governed operational progress.”
+Show `artifacts/live-proof-card.png` and the public repository. Say: "A separate real CALL-E call completed on September 11. It reached a person and returned three evidence items, but ended before a blocker or next owner was established. The schema-valid result was needs human. This is the central product rule: a fluent call summary is never more important than what the evidence actually proves."

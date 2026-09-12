@@ -32,8 +32,8 @@
     "checklist_file": "docs/hackathon-build/checklist.md"
   },
   "submission": {
-    "draft_file": "DEVPOST_SUBMISSION_DRAFT.md",
-    "status": "not-started"
+    "draft_file": "devpost-submission.md",
+    "status": "drafting"
   },
   "next_command": "prepare-submission"
 }
