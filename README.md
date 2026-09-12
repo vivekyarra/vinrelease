@@ -11,7 +11,7 @@ It is a narrow CALL-E-powered desk for overdue vehicle-title exceptions, not a g
 
 ## One case, three outcomes
 
-The public demo begins with a synthetic 2019 BMW 330i, 25 days overdue, and $18,700 of inventory blocked. An authorized auction result identifies a missing lien release and names ABC Bank as the next party. A separately authorized bank result supplies reference `LR-4721`, but only says the release was sent. VINRelease therefore moves to `WAITING_EXTERNAL`, not "closed." Reset and choose **Unsupported credential request** to see the other outcome: the agent refuses the request and routes the case to a title clerk.
+The public demo begins with a synthetic, overdue 2019 BMW 330i and $18,700 of inventory blocked. An authorized auction result identifies a missing lien release and names ABC Bank as the next party. A separately authorized bank result supplies reference `LR-4721`, but only says the release was sent. VINRelease therefore moves to `WAITING_EXTERNAL`, not "closed." Reset and choose **Unsupported credential request** to see the other outcome: the agent refuses the request and routes the case to a title clerk.
 
 Those results are deterministic **no-call replays**, so judges can test the entire flow without dialing a stranger or consuming CALL-E credits. The $18,700 is example inventory value, not measured savings.
 
@@ -29,7 +29,7 @@ Each call preview shows the provisioned recipient, purpose, allowed facts, forbi
 
 Open the [public app](https://vinrelease.vercel.app) and confirm the header reads **Safe demo**. Click **Resolve next blocker**, review the masked Metro Auto Auction recipient and disclosure packet, check authorization, and start the safe replay. The case should become **Next call ready** with **Lien release missing** and ABC Bank as next owner. Authorize the separate ABC Bank replay; the case should become **Waiting external** with `LR-4721` in its evidence, never closed. Reset, select **Unsupported credential request**, authorize, and confirm **Needs title clerk**.
 
-No real call is placed by the public deployment. The [1:43 narrated walkthrough](https://youtu.be/wgtoLw5kPNo) shows actual browser pointer movement, clicks, and state changes. It does not represent the replay as a live phone conversation.
+No real call is placed by the public deployment. The [roughly 1:44 narrated walkthrough](https://youtu.be/wgtoLw5kPNo) shows actual browser pointer movement, clicks, and state changes. It does not represent the replay as a live phone conversation.
 
 ## Run locally
 
