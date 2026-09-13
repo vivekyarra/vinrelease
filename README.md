@@ -4,10 +4,10 @@ The auction says "pending." The lienholder says "sent." The dealership still has
 
 It is a narrow CALL-E-powered desk for overdue vehicle-title exceptions, not a general dealership CRM or a claim that AI can issue titles.
 
-- **Watch the walkthrough:** https://youtu.be/wgtoLw5kPNo
+- **Watch the walkthrough:** https://youtu.be/8X7ERrB8qbo
 - **Try the public app:** https://vinrelease.vercel.app
 - **CALL-E gallery pull request:** https://github.com/CALLE-AI/awesome-phone-call-agents/pull/463
-- **Narrated local MP4:** [artifacts/vinrelease-demo-final.mp4](artifacts/vinrelease-demo-final.mp4)
+- **Narrated local MP4 (with real title-clerk listing):** [artifacts/vinrelease-demo-final.mp4](artifacts/vinrelease-demo-final.mp4)
 
 ## One case, three outcomes
 
@@ -29,7 +29,7 @@ Each call preview shows the provisioned recipient, purpose, allowed facts, forbi
 
 Open the [public app](https://vinrelease.vercel.app) and confirm the header reads **Safe demo**. Click **Resolve next blocker**, review the masked Metro Auto Auction recipient and disclosure packet, check authorization, and start the safe replay. The case should become **Next call ready** with **Lien release missing** and ABC Bank as next owner. Authorize the separate ABC Bank replay; the case should become **Waiting external** with `LR-4721` in its evidence, never closed. Reset, select **Unsupported credential request**, authorize, and confirm **Needs title clerk**.
 
-No real call is placed by the public deployment. The [roughly 1:44 narrated walkthrough](https://youtu.be/wgtoLw5kPNo) shows actual browser pointer movement, clicks, and state changes. It does not represent the replay as a live phone conversation.
+No real call is placed by the public deployment. The [roughly 1:59 narrated walkthrough](https://youtu.be/8X7ERrB8qbo) opens with footage of a Trailside RV Center title-clerk posting, then shows actual browser pointer movement, clicks, and state changes in VINRelease. The posting establishes that dealerships hire staff for outstanding-title follow-up; it does not imply Trailside uses VINRelease or that VINRelease performs the full billing and titling role. The video does not represent the replay as a live phone conversation.
 
 ## Run locally
 
